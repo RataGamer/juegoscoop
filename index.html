@@ -1,57 +1,54 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<font face="lucida sans unicode">
-<title>JuegosCoop</title>
-<link rel="icon" href="logo.png" type="image/png" sizes="32x32">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JuegosCoop</title>
+    <link rel="icon" href="logo.png" type="image/png" sizes="32x32">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            padding: 25px;
+            background-color: black;
+            color: white;
+        }
+
+        .dark-mode {
+            background-color: white;
+            color: black;
+        }
+
+        .container img {
+            width: 2%;
+            height: auto;
+        }
+    </style>
 </head>
-<link rel="stylesheet" href="style.css">
-<div style="text-align:right" class="container">
-<img src="darkmode.png" alt="Sun"
-<button onclick="myFunction()"></button>
-</div>
-
-<style>
-body {
-  padding: 25px;
-  background-color: black;
-  color: white;
-}
-
-.dark-mode {
-  background-color: white;
-  color: black;
-}
-.container img {
-  width: 2%;
-  height: auto;
-  }
-</style>
-
-<p><center><img src="202310131074195_1.png"></center></p>
-
 <body>
-<script>
-function myFunction() {
-   var element = document.body;
-   element.classList.toggle("dark-mode");
-}
-</script>
+    <div style="text-align:right" class="container">
+        <img src="darkmode.png" alt="Sun">
+        <button onclick="myFunction()">Toggle Dark Mode</button>
+    </div>
 
-<center><h1><font color="red">COMPILACIÓN DE JUEGOS</font></h1></center>
-<center><h5>Ultima actulización [15/04/24]</h5></center>
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
 
-<p><center><h3><font color="red">INSTRUCCIONES</font></h3></center>
-<center><h4>1. Abrir .zip</h4></center>
-<center><h4>2. Extraer la carpeta</h4></center>
-<center><h4>3. Abrir el .exe y jugar</h4></center></p>
+    <center><h1><font color="red">COMPILACIÓN DE JUEGOS</font></h1></center>
+    <center><h5>Ultima actulización [15/04/24]</h5></center>
 
-<p>
-<center><h3><font color="red" class="darkmode-ignore">JUEGOS</font></h3></center>
-<center><h4><a href="https://qiwi.gg/file/7JPX9333-ContentWarning" target="_blank">Content Warning</a></h4></center>
-<center><h5>1.9b [11/04/24]</h5></center>
-<center><h4><a href="https://www.7-zip.org/a/7z2404-x64.exe">Programa para descomprimir</a></h4></center>
-<center><h5>7zip [24.04]</h5></center></p>
-<br>
-</font>
+    <p><center><h3><font color="red">INSTRUCCIONES</font></h3></center>
+    <center><h4>1. Abrir .zip</h4></center>
+    <center><h4>2. Extraer la carpeta</h4></center>
+    <center><h4>3. Abrir el .exe y jugar</h4></center></p>
+
+    <p><center><h3><font color="red" class="darkmode-ignore">JUEGOS</font></h3></center>
+    <center><h4><a href="https://qiwi.gg/file/7JPX9333-ContentWarning" target="_blank">Content Warning</a></h4></center>
+    <center><h5>1.9b [11/04/24]</h5></center>
+    <center><h4><a href="https://www.7-zip.org/a/7z2404-x64.exe">Programa para descomprimir</a></h4></center>
+    <center><h5>7zip [24.04]</h5></center></p>
 </body>
 </html>
