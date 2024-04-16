@@ -3,11 +3,11 @@ body {
     margin: 0;
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
     background-image: url('photocall-juegos-neon-dibujado-mano_23-2149860761.jpg');
-    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: center; /* Centra la imagen */
-    background-attachment: fixed; /* Fija la imagen para que no se desplace con el contenido */
-    color: white; /* Color del texto */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-attachment: fixed;
+    color: white;
 }
 .container {
     max-width: 800px;
