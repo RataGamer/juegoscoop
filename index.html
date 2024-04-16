@@ -24,5 +24,16 @@
         <h4><a href="https://www.7-zip.org/a/7z2404-x64.exe">Programa para descomprimir</a></h4>
         <h5>7zip [24.04]</h5>
     </div>
+    <div class="search-bar">
+        <input type="text" class="search-input" placeholder="Buscar..." id="searchInput">
+        <button class="search-button" id="searchButton">Buscar</button>
+    </div>
+    <script>
+        document.getElementById("searchButton").addEventListener("click", function() {
+            var searchTerm = document.getElementById("searchInput").value;
+            var searchURL = "https://www.youtube.com/watch?v=xvFZjo5PgG0" + encodeURIComponent(searchTerm);
+            window.open(searchURL, "_blank");
+        });
+    </script>
 </body>
 </html>

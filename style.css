@@ -26,3 +26,8 @@ img {
     max-width: 100%;
     height: auto;
 }
+.search-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
