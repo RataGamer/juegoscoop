@@ -17,22 +17,50 @@
         <h4>2. Extraer la carpeta</h4>
         <h4>3. Abrir el .exe y jugar</h4>
 
-        <h3><span style="color: red;">JUEGOS</span></h3>
-        <h4><a href="https://qiwi.gg/file/7JPX9333-ContentWarning" target="_blank">Content Warning</a></h4>
-        <h5>1.9b [11/04/24]</h5>
-        <h4><a href="https://www.7-zip.org/a/7z2404-x64.exe">Programa para descomprimir</a></h4>
-        <h5>7zip [24.04]</h5>
-    </div>
-    <div class="search-bar">
-        <input type="text" class="search-input" placeholder="Buscar..." id="searchInput">
-        <button class="search-button" id="searchButton">Buscar</button>
-    </div>
-    <script>
-        document.getElementById("searchButton").addEventListener("click", function() {
-            var searchTerm = document.getElementById("searchInput").value;
-            var searchURL = "https://www.youtube.com/watch?v=xvFZjo5PgG0" + encodeURIComponent(searchTerm);
-            window.open(searchURL, "_blank");
-        });
-    </script>
+        <h3><span style="color: red;">JUEGOS</span></h3>       
+
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Buscar juegos...">
+            <button type="button" onclick="filterGames()">Buscar</button>
+        </form>
+    
+        <div id="gameList">
+            <h4><a href="https://qiwi.gg/file/7JPX9333-ContentWarning" target="_blank">Content Warning</a></h4>
+            <h5>1.9b [11/04/24]</h5>
+            <h4><a href="https://www.7-zip.org/a/7z2404-x64.exe">Programa para descomprimir</a></h4>
+            <h5>7zip [24.04]</h5>
+        </div>
+    
+        <p id="noResultsText" style="display: none; color: red;">No se encontraron juegos.</p>
+    
+        <script>
+            function filterGames() {
+                var input, filter, games, i, txtValue;
+                input = document.getElementById("searchInput");
+                filter = input.value.toUpperCase();
+                games = document.getElementById("gameList").getElementsByTagName("h4");
+                noResultsText = document.getElementById("noResultsText");
+    
+                var found = false;
+    
+                for (i = 0; i < games.length; i++) {
+                    txtValue = games[i].textContent || games[i].innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        games[i].style.display = "";
+                        games[i].nextElementSibling.style.display = ""; // Show corresponding h5 tag
+                        found = true;
+                    } else {
+                        games[i].style.display = "none";
+                        games[i].nextElementSibling.style.display = "none"; // Hide corresponding h5 tag
+                    }
+                }
+    
+                if (!found) {
+                    noResultsText.style.display = "block";
+                } else {
+                    noResultsText.style.display = "none";
+                }
+            }
+        </script>
 </body>
 </html>
