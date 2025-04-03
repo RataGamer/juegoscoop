@@ -10,22 +10,42 @@
 <body>
         <img src="header.jpg" alt="Logo" style="max-width: 400%; height: auto;">
         <h1><span style="color: red;">COMPILACIÓN DE JUEGOS</span></h1>
-        <h5>Última actualización [30/03/2025]</h5>
+        <h4>Última actualización [30/03/2025]</h4>
+        
+    <h3 class="dropdown-title" onclick="toggleDropdown()">
+        <span style="color: red;">INSTRUCCIONES</span>
+        <span class="arrow">▶</span>
+    </h3>
 
-        <h3><span style="color: red;">INSTRUCCIONES</span></h3>
-        <h4>1. Abrir .zip</h4>
-        <h4>2. Extraer la carpeta</h4>
-        <h4>3. Abrir el .exe y jugar</h4>
+    <div id="dropdownContent" class="dropdown-content">
+        <ul>
+            <li>1. Abrir .zip</li>
+            <li>2. Extraer la carpeta</li>
+            <li>3. Abrir el .exe y jugar</li>
+        </ul>
+    </div>
 
-        <h3><span style="color: red;">JUEGOS</span></h3>       
-
+        <h3><span style="color: red;">JUEGOS</span></h3>
+        
         <div id="gameList">
-            <h4><a href="https://www.mediafire.com/file/oa4q8kjzwi52vhr/R.E.P.O.zip/file" target="_blank">R.E.P.O.</a></h4>
+            <h3><a href="https://www.mediafire.com/file/oa4q8kjzwi52vhr/R.E.P.O.zip/file" target="_blank">R.E.P.O.</a></h3>
             <h5>0.1.2 + Nekogiri Mod [01/03/25]</h5>
-            <h4><a href="https://www.mediafire.com/file/k7na5baghfht0uz/Content_Warning.zip/file" target="_blank">Content Warning</a></h4>
+
+            <h3><a href="https://www.mediafire.com/file/k7na5baghfht0uz/Content_Warning.zip/file" target="_blank">Content Warning</a></h3>
             <h5>1.15a [15/05/24]</h5>
-            <h4><a href="https://www.mediafire.com/file/wx23y1gxjws0ium/Lethal_Company.zip/file" target="_blank">Lethal Company</a></h4>
+
+            <h3><a href="https://www.mediafire.com/file/wx23y1gxjws0ium/Lethal_Company.zip/file" target="_blank">Lethal Company</a></h3>
             <h5>v50 [13/04/24]</h5>
         </div>
+
+    <script>
+        function toggleDropdown() {
+            var content = document.getElementById("dropdownContent");
+            var arrow = document.querySelector(".arrow");
+
+            content.classList.toggle("show");
+            arrow.classList.toggle("open");
+        }
+    </script>
 </body>
 </html>

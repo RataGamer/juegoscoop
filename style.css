@@ -26,3 +26,52 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+#gameList h5 {
+    margin-bottom: 50px;
+}
+
+.dropdown-title {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.dropdown-content {
+    display: none;
+    padding: 10px;
+    border-left: 3px solid red;
+    margin: 5px auto;
+    background-color: #00000000;
+    text-align: center;
+    transition: opacity 0.3s ease-in-out;
+    max-width: 300px;
+}
+
+.dropdown-content h4, 
+.dropdown-content h5, 
+.dropdown-content li {
+    font-weight: bold;
+}
+
+.dropdown-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dropdown-content.show {
+    display: block;
+    opacity: 1;
+}
+
+.arrow {
+    transition: transform 0.3s ease-in-out;
+    display: inline-block;
+}
+
+.arrow.open {
+    transform: rotate(90deg);
+}
