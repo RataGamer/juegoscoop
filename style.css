@@ -16,7 +16,7 @@ body {
     padding: 20px;
 }
 
-h1, h3, h4, h5 {
+h1, h2, h3, h4, h5 {
     text-align: center;
 }
 
@@ -25,6 +25,15 @@ img {
     margin: 0 auto;
     max-width: 100%;
     height: auto;
+}
+
+a {
+    color: rgb(0, 0, 255);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(140, 0, 255);
 }
 
 #gameList h5 {
