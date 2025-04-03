@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <img src="header.jpg" alt="Logo" style="max-width: 25%; height: auto;">
+        <img src="header.jpg" alt="Logo" style="max-width: 400%; height: auto;">
         <h1><span style="color: red;">COMPILACIÓN DE JUEGOS</span></h1>
         <h5>Última actualización [30/03/2025]</h5>
 
@@ -19,11 +19,6 @@
 
         <h3><span style="color: red;">JUEGOS</span></h3>       
 
-        <form id="searchForm">
-            <input type="text" id="searchInput" placeholder="Buscar juegos...">
-            <button type="button" onclick="filterGames()">Buscar</button>
-        </form>
-    
         <div id="gameList">
             <h4><a href="https://www.mediafire.com/file/oa4q8kjzwi52vhr/R.E.P.O.zip/file" target="_blank">R.E.P.O.</a></h4>
             <h5>0.1.2 + Nekogiri Mod [01/03/25]</h5>
@@ -32,37 +27,5 @@
             <h4><a href="https://www.mediafire.com/file/wx23y1gxjws0ium/Lethal_Company.zip/file" target="_blank">Lethal Company</a></h4>
             <h5>v50 [13/04/24]</h5>
         </div>
-    
-        <p id="noResultsText" style="display: none; color: red;">No se encontraron juegos.</p>
-    
-        <script>
-            function filterGames() {
-                var input, filter, games, i, txtValue;
-                input = document.getElementById("searchInput");
-                filter = input.value.toUpperCase();
-                games = document.getElementById("gameList").getElementsByTagName("h4");
-                noResultsText = document.getElementById("noResultsText");
-    
-                var found = false;
-    
-                for (i = 0; i < games.length; i++) {
-                    txtValue = games[i].textContent || games[i].innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        games[i].style.display = "";
-                        games[i].nextElementSibling.style.display = "";
-                        found = true;
-                    } else {
-                        games[i].style.display = "none";
-                        games[i].nextElementSibling.style.display = "none";
-                    }
-                }
-    
-                if (!found) {
-                    noResultsText.style.display = "block";
-                } else {
-                    noResultsText.style.display = "none";
-                }
-            }
-        </script>
 </body>
 </html>
